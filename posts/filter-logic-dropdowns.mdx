@@ -65,9 +65,9 @@ Let's set this up. Here is some state for our Dropdown component (which - to put
         if (hasTypeOptions) setWhichType("justType");
         if (hasPackOptions) setWhichType("typeAndPack");
         if (hasMaterialOptions) setWhichType("typePackMaterial");
-        setHasPackOptions(true);
-        setHasTypeOptions(true);
-        setHasMaterialOptions(true);
+        setHasPackOptions(hasPackOptions);
+        setHasTypeOptions(hasTypeOptions);
+        setHasMaterialOptions(hasMaterialOptions);
     }, [product.variants]);
 
 `}

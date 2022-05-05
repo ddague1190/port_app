@@ -4,8 +4,9 @@ import lerp from "lerp"
 import "./CustomMaterial"
 import { useBlock } from "../utilities/Blocks"
 import state from "../../store"
+import { Sky } from "@react-three/drei"
 
-const Plane = forwardRef(({ color = "white", shift = 1, opacity = 1, args, map, ...props }, ref) => {
+const Plane2 = forwardRef(({ color = "white", shift = 1, opacity = 1, args, map, ...props }, ref) => {
   const { viewportHeight, offsetFactor } = useBlock()
   const material = useRef()
   let last = state.top.current
@@ -17,10 +18,11 @@ const Plane = forwardRef(({ color = "white", shift = 1, opacity = 1, args, map, 
   })
   return (
     <mesh ref={ref} {...props}>
+
       <planeBufferGeometry args={args} />
       <customMaterial ref={material} color={color} attach="material" map={map} transparent opacity={opacity} />
     </mesh>
   )
 })
 
-export default Plane
+export default Plane2

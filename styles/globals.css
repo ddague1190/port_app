@@ -31,7 +31,6 @@ a:hover {
 }
 
 
-
 ::selection {
   background: #2ddab8;
   color: white;
@@ -47,9 +46,12 @@ a:hover {
 canvas {
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
 }
 
-
+.canvas > div {
+  z-index: 10000000;
+}
 .loading {
   padding: 10px;
   transform: translate3d(-50%, -50%, 0);
@@ -106,9 +108,9 @@ canvas {
 }
 
 @media screen and (min-width: 53em) {
-  /* body {
+  body {
     overflow: hidden;
-  } */
+  }
   .frame {
     display: grid;
     height: 100vh;

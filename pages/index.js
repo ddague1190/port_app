@@ -18,10 +18,11 @@ import TroikaText from "../components/three/text/Text"
 import FrontPageAbout from "../components/promo/FrontPageAbout"
 import Content from "../components/promo/Content"
 import { addOverflowHidden, removeOverflowHidden } from "../lib/homeOverflowStyles"
+import Diamonds from "../components/promo/diamonds/Diamonds"
 
 
 export default function Home() {
-    useEffect(()=>{
+    useEffect(() => {
         addOverflowHidden();
         return removeOverflowHidden
     }, [])
@@ -32,8 +33,8 @@ export default function Home() {
         <>
             <Canvas linear orthographic camera={{ zoom: state.zoom, position: [0, 0, 500] }}>
                 <Suspense fallback={<Html center className="loading" children="Loading..." />}>
-                    <Content/>
-                    
+                    <Content />
+                    <Diamonds />
                 </Suspense>
             </Canvas>
             <div className="scrollArea" ref={scrollArea} onScroll={onScroll}>
