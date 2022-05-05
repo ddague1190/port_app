@@ -8,10 +8,10 @@ export default function VerticalScrollCanvas() {
     return (
       <Canvas gl={{ antialias: false }} dpr={[1, 1.5]}>
           
-          <ambientLight />
+          {/* <ambientLight />
           <pointLight position={[10, 10, 10]} />
           <Box position={[-1.2, 0, 0]} />
-          <Box position={[1.2, 0, 0]} />
+          <Box position={[1.2, 0, 0]} /> */}
         <Suspense fallback={null}>
           <ScrollControls damping={4} pages={3}>
             <Scroll>
